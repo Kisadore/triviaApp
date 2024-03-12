@@ -1,8 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="urV-S9-QVy">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Trivia View Controller-->
+        <scene sceneID="953-SV-yih">
+            <objects>
+                <viewController title="Trivia View Controller" id="urV-S9-QVy" customClass="TriviaViewController" customModule="Trivia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cmh-HV-LKd">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JPu-YT-kb0">
+                                <rect key="frame" x="143" y="84" width="107" height="28"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Topic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jyO-nR-hX7">
+                                <rect key="frame" x="170.66666666666666" y="122.00000000000001" width="52" height="23.666666666666671"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PXp-FR-CSx">
+                                <rect key="frame" x="79" y="451" width="244" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.42352938649999999" green="0.34901961679999999" blue="0.28627452250000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.71764707569999997" green="0.87450981139999995" blue="0.7019608021" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Button 2"/>
+                                <connections>
+                                    <action selector="answerSelected:" destination="urV-S9-QVy" eventType="touchUpInside" id="TWE-dC-4Qu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0W-2w-U4d">
+                                <rect key="frame" x="79" y="528" width="246" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.42352938649999999" green="0.34901961679999999" blue="0.28627452250000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.71372550729999995" green="0.87058818339999999" blue="0.7019608021" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Button 3"/>
+                                <connections>
+                                    <action selector="answerSelected:" destination="urV-S9-QVy" eventType="touchUpInside" id="3my-Rh-gqI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E6w-cW-yHZ">
+                                <rect key="frame" x="79" y="604" width="246" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.42352938649999999" green="0.34901961679999999" blue="0.28627452250000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.7019608021" green="0.85490196939999996" blue="0.68627452850000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Button 4"/>
+                                <connections>
+                                    <action selector="answerSelected:" destination="urV-S9-QVy" eventType="touchUpInside" id="paE-rr-cOc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Obd-bb-UUe">
+                                <rect key="frame" x="79" y="374" width="246" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.4196078479" green="0.34509804840000002" blue="0.2823529541" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.70588237050000002" green="0.86274516580000005" blue="0.69411766529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Button 1"/>
+                                <connections>
+                                    <action selector="answerSelected:" destination="urV-S9-QVy" eventType="touchUpInside" id="K76-hR-rFL"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Questions" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0bl-LF-UuU">
+                                <rect key="frame" x="12" y="169" width="368" height="188"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.92844383559999999" blue="0.883336809" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aiE-gl-1lX"/>
+                        <color key="backgroundColor" red="0.70588237050000002" green="0.86274516580000005" blue="0.69411766529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="jyO-nR-hX7" firstAttribute="centerX" secondItem="cmh-HV-LKd" secondAttribute="centerX" id="5fn-vB-jP3"/>
+                            <constraint firstItem="JPu-YT-kb0" firstAttribute="centerX" secondItem="cmh-HV-LKd" secondAttribute="centerX" id="DLE-nS-usA"/>
+                            <constraint firstItem="JPu-YT-kb0" firstAttribute="top" secondItem="aiE-gl-1lX" secondAttribute="top" constant="25" id="Faf-pa-CIT"/>
+                            <constraint firstItem="jyO-nR-hX7" firstAttribute="top" secondItem="JPu-YT-kb0" secondAttribute="bottom" constant="10" id="yYY-fb-ZE7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="answerChoice1" destination="Obd-bb-UUe" id="DB1-xP-DqT"/>
+                        <outlet property="answerChoice2" destination="PXp-FR-CSx" id="Eoe-qz-e2u"/>
+                        <outlet property="answerChoice3" destination="g0W-2w-U4d" id="urN-LH-S2Y"/>
+                        <outlet property="answerChoice4" destination="E6w-cW-yHZ" id="zif-XS-6XL"/>
+                        <outlet property="currentQ" destination="JPu-YT-kb0" id="GrL-J6-TYM"/>
+                        <outlet property="questionLabel" destination="0bl-LF-UuU" id="U5w-vs-VfQ"/>
+                        <outlet property="topicLabel" destination="jyO-nR-hX7" id="dCH-8v-lE5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BUa-Zm-pf1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-19.083969465648853" y="-94.366197183098592"/>
+        </scene>
+    </scenes>
 </document>
